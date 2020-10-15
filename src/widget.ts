@@ -45,6 +45,7 @@ const Widget: IWidget = {
   setupListeners: function () {
     window.addEventListener("message", this.handleMessage.bind(this));
   },
+  
   handleMessage: function (e) {
     e.preventDefault();
     if (!e.data || typeof e.data !== "string") return;
