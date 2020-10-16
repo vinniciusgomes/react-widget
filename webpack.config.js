@@ -12,11 +12,11 @@ const config = {
       "webpack/hot/only-dev-server",
       "./src/index.tsx",
     ],
-    Widget: ["./src/widget.ts"],
+    loader: ["./src/loader.ts"],
   },
   output: {
     filename: "[name].js",
-    path: resolve(__dirname, "dist"),
+    path: resolve(__dirname, "build"),
     library: "[name]",
     libraryTarget: "umd",
     libraryExport: "default",
@@ -43,11 +43,11 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
+      template: "./public/index.html",
       hash: true,
       filename: "index.html",
       inject: "body",
-      excludeChunks: ["widget"],
+      excludeChunks: ["loader"],
     }),
   ],
 };

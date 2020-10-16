@@ -1,7 +1,7 @@
 const defaultStyles: any = {
   border: "none !important",
-  height: "650px",
-  width: "750px",
+  height: "100vh",
+  width: "100vw",
   display: "block !important",
   visibility: "visible",
   background: "none transparent",
@@ -9,7 +9,7 @@ const defaultStyles: any = {
 };
 
 interface IData {
-  teste: string;
+  value: string;
 }
 
 interface IWidget {
